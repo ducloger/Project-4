@@ -1,0 +1,12 @@
+.container-1{
+    display: flex;
+}
+button.btn_hover:hover{
+    color: red;
+}
+.button-text{
+    justify-content: end;
+}
+a:hover{
+    color: red !important;
+}
