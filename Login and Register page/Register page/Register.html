@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/bootstrap-5.3.0-dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/Login and Register page/Register page/Register.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 </head>
 
 <body class="img js-fullheight">
@@ -23,29 +23,32 @@
                                 <input type="text" class="form-control" placeholder="Username" id="username" required />
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control form-control-user" id="email" placeholder="Email Address">
+                                <input type="email" class="form-control form-control-user" id="email"
+                                    placeholder="Email Address" />
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control form-control-user" id="password" placeholder="Password">
+                                <input type="password" class="form-control form-control-user" id="password"
+                                    placeholder="Password" />
                                 <span toggle="#password-field"
                                     class="fa fa-fw fa-eye field-icon toggle-password"></span>
                             </div>
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="Re-enter password"
-                                    id="repeat_password" required>
-                                <i class="fa-regular fa-eye field-icon toggle-password" style="color: #ffffff;"></i>
-
+                                    id="repeat_password" required />
+                                <i class="fa-regular fa-eye field-icon toggle-password" style="color: #ffffff"></i>
                             </div>
                             <div class="form-group">
-                                <a href="#" class="btn btn-primary btn-user btn-block" id="registerBtn">Register Account</a>
+                                <a href="#" class="btn btn-primary btn-user btn-block" id="registerBtn">Register
+                                    Account</a>
                             </div>
                         </form>
                         <p class="w-100 text-center">&mdash; Or Register With &mdash;</p>
                         <div class="social d-flex text-center">
-                            <a href="#" class="px-2 py-2 mr-md-1 rounded facebook-btn"><i
-                                    class="fa-brands fa-facebook"></i>
+                            <a href="#" class="px-2 py-2 mr-md-1 rounded facebook-btn" id="facebook-btn">
+                                <i class="fa-brands fa-facebook"></i> 
                                 Facebook</a>
-                            <a href="#" class="px-2 py-2 ml-md-1 rounded google-btn"><i class="fa-brands fa-google"></i>
+                            <a href="#" class="px-2 py-2 ml-md-1 rounded google-btn" id="google-btn">
+                                <i class="fa-brands fa-google"></i>
                                 Google</a>
                         </div>
                     </div>
@@ -57,5 +60,5 @@
 <script src="./Register.js"></script>
 <script src="https://kit.fontawesome.com/1e5220a62d.js" crossorigin="anonymous"></script>
 <script src="/Login and Register page/FirebaseConfig/register.js" type="module"></script>
-
+<script type="module" src="/Login and Register page/FirebaseConfig/google_login.js"></script>
 </html>
