@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rename Product Image</title>
+    <link rel="stylesheet" href="Untitled-1.css" />
+  </head>
+  <body>
+    <div class="inputImgContainer">
+      <input
+        type="file"
+        name="Image Input"
+        id="imageInp"
+        class="imageInp"
+        accept="image/gif, image/jpeg ,imgae/png"
+        onchange="getImgData(event)"
+      />
+      <button id="inputImgBtn" onclick="chooseFlie()">Choose Image</button>
+      <span class="ImgNameSpan"></span>
+    </div>
+  </body>
+  <script src="./Untitled-2.js"></script>
+</html>

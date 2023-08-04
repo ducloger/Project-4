@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>File Path Example</title>
+</head>
+<body>
+  <input type="file" id="fileInput">
+  <script>
+    const fileInput = document.getElementById("fileInput");
+
+    fileInput.addEventListener("change", function(event) {
+      const filePath = event.target.value; // This will not give the full file path, only the file name
+      console.log("Selected file path: ", filePath);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="file" id="fileInput" />
+    <button onclick="uploadFile()">Upload File</button>
+    <script>
+      function uploadFile() {
+        const fileInput = document.getElementById("fileInput");
+        const file = fileInput.files[0];
+
+        // Create a reference to the Firebase Storage bucket and specify the path to upload the file
+        const storageRef = storage.ref("uploads/" + file.name);
+
+        // Upload the file to Firebase Storage
+        const task = storageRef.put(file);
+
+        // Monitor the upload progress
+        task.on(
+          "state_changed",
+          (snapshot) => {
+            // Handle progress updates here if needed
+            const progress =
+              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            console.log("Upload progress: " + progress + "%");
+          },
+          (error) => {
+            // Handle errors during the upload
+            console.error("Error uploading file: ", error);
+          },
+          () => {
+            // Upload completed successfully
+            console.log("File uploaded successfully!");
+          }
+        );
+      }
+    </script>
+  </body>
+</html>
