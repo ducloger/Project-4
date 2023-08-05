@@ -3,7 +3,7 @@ import {
   onAuthStateChanged,
   signOut,
 } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
-import { app, database } from "./config.js";
+import { app, database } from "../Login page/config.js";
 import {
   ref,
   push,

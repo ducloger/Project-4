@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
-import { app } from "/Login and Register page/FirebaseConfig/config.js";
+import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { app } from "./config,js";
 
 // Get the initialized Firebase app
 const auth = getAuth(app);
@@ -19,7 +19,7 @@ loginBtn.addEventListener("click", e => {
   signInWithEmailAndPassword(auth, userEmail, userPassword)
     .then(function (userCredential) {
       console.log("login success");
-      window.location.assign('./index.html');
+      window.location.assign('/Main page/idex.html');
     }).catch(function (err) {
       alert("Error: " + err);
     })
