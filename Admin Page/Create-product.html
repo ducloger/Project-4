@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>DarkPan - Bootstrap 5 Admin Template</title>
+    <title>Create</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="" name="keywords" />
     <meta content="" name="description" />
-
+    <script src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.1.0  /firebase-storage.js"></script>
     <link rel="stylesheet" href="/bootstrap-5.3.0-dist/css/bootstrap.min.css" />
     <link href="img/favicon.ico" rel="icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +31,7 @@
     />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./cssflie.css">
   </head>
   <body>
     <div class="container-fluid position-relative d-flex p-0">
@@ -51,7 +53,7 @@
         <nav class="navbar bg-secondary navbar-dark">
           <a href="index.html" class="navbar-brand mx-4 mb-3">
             <h3 class="text-primary">
-              <i class="fa fa-user-edit me-2"></i>Admin
+              <i class="fa fa-user-edit me-2"></i>Create 
             </h3>
           </a>
           <div class="d-flex align-items-center ms-4 mb-4">
@@ -60,11 +62,14 @@
           </div>
           <div class="navbar-nav w-100">
             <a href="./Admin Page.html" class="nav-item nav-link active"
-              ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
+              ><i class="fa fa-tachometer-alt me-2"></i>Admin</a
             >
             <a href="./User.html" class="nav-item nav-link"
               ><i class="fa fa-table me-2"></i>Tables</a
             >
+            <a href="./listproducts.html" class="nav-item nav-link">
+              <i class="fa fa-table me-2"></i>Product
+            </a>
             </div>
           </div>
         </nav>
@@ -73,29 +78,26 @@
       <div class="content">
         <div class="container-fluid pt-4 px-4">
           <div
-            class="row vh-100 bg-secondary rounded align-items-center justify-content-center mx-0"
+            class="row vh-100 bg-secondary rounded align-items-center mx-0"
           >
-            <div class="inputDiv flex-column">
+            <div class="inputDiv">
               <input
                 type="text"
-                class="bruh"
+                class="bruh1"
                 placeholder="ProductName"
-                id="productname"
+                id="name"
               />
               <input
                 type="text"
                 placeholder="Quantity"
                 name=""
                 id="quantity"
-                class="bruh"
+                class="bruh2"
               />
-              <input type="text" placeholder="Cost" id="cost" class="bruh" />
-              <input type="text" placeholder="Price" id="price" class="bruh" />
-              <button id="saveButton">Submit</button>
-              <div class="image Input">
-                <input type="file" class="heh" id="flieinput" />
-                <img class="img" />
-              </div>
+              <input type="text" placeholder="Cost" id="cost" class="bruh3" />
+              <input type="text" placeholder="Price" id="price" class="bruh4" />
+              <input type="text" placeholder="Description" id="description" class="bruh5">
+              <button id="saveButton" class="saveBtn">Submit</button>
             </div>
           </div>
         </div>
@@ -114,4 +116,5 @@
   <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
   <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
   <script src="js/main.js"></script>
+  <script type="module" src="/Login and Register page/FirebaseConfig/create-product.js"></script>
 </html>

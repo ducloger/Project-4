@@ -1,0 +1,101 @@
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+.inputDiv .bruh1{
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    border:none;
+}
+.inputDiv .bruh2{
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    border:none;
+}
+.inputDiv .bruh3{
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    border:none;
+}
+.inputDiv .bruh4{
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    border:none;
+}
+.inputDiv .bruh5{
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-left: 4%;
+    margin-right: 4%;
+    border: none;
+}
+.inputDiv .fliedata{
+    display: none;
+}
+.inputDiv .saveBtn{
+    border-radius: 20px;
+    padding: 10px;
+    margin-left: 4%;
+    margin-right: 4%;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+.inputDiv .bruh1::placeholder{
+    font-weight: 700;
+}
+.inputDiv .bruh2::placeholder{
+    font-weight: 700;
+}
+.inputDiv .bruh3::placeholder{
+    font-weight: 700;
+}
+.inputDiv .bruh4::placeholder{
+    font-weight: 700;
+}
+.inputDiv .bruh5::placeholder{
+    font-weight: 700;
+}
+.imgInp{
+    width:100%;
+    height: 200px;
+
+    
+}
+.imgInp .heh{
+    display: none;
+}
+.imgInp .inputImgBtn{
+    height: 200px;
+    width: 100%;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 30px;
+    border:none;
+}
+.inp {
+  display: block;
+}
+
+* {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-size: 20px;
+  }
+  
+  

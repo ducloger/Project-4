@@ -1,20 +1,12 @@
-import {
-  getAuth,
-  onAuthStateChanged,
-  signOut,
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
+import { getAuth,onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { app, database } from "./config.js"; // Assuming this is the correct path to your config.js file
-import {
-  ref,
-  onValue,
-  remove,
-} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
+import { ref, onValue, remove } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
 
 const auth = getAuth(app);
 
 // Function to retrieve products from the database and populate the table
 function getProducts() {
-  const tableBody = document.querySelector("#product productDiv");
+  const tableBody = document.querySelector("#dataTable tbody");
 
   // Retrieve the "products" node from the database
   const productRef = ref(database, "products");
@@ -23,25 +15,23 @@ function getProducts() {
     const products = snapshot.val();
 
     // Clear existing table rows
-    products.innerHTML = "";
+    tableBody.innerHTML = "";
 
     // Iterate over each product
     for (const productId in products) {
       const product = products[productId];
-      const idDiv = document.createElement("div")
-      const containerDiv = document.getElementById("big_div")
-      containerDiv.appendChild(idDiv)
-      const h3 = document.createElement("h3")
-
 
       // Create a new row in the table
       const row = document.createElement("tr");
 
       // Create table cells and populate them with product data
+      const idCell = document.createElement("td");
+      idCell.textContent = product.id;
+      row.appendChild(idCell);
 
-      const NameDiv = document.createElement("div");
-      NameDiv.textContent = product.name;
-      row.appendChild(NameCell);
+      const nameCell = document.createElement("td");
+      nameCell.textContent = product.name;
+      row.appendChild(nameCell);
 
       const quantityCell = document.createElement("td");
       quantityCell.textContent = product.quantity;
@@ -55,9 +45,9 @@ function getProducts() {
       priceCell.textContent = product.price;
       row.appendChild(priceCell);
 
-      const desCell = document.createElement("td");
-      desCell.textContent = product.description;
-      row.appendChild(desCell);
+      const descriptionCell = document.createElement("td");
+      descriptionCell.textContent = product.description;
+      row.appendChild(descriptionCell);
 
       const actionCell = document.createElement("td");
       const editLink = document.createElement("a");
@@ -95,17 +85,15 @@ function deleteProduct(productId) {
     });
 }
 
-var logoutBtn = document.getElementById("logoutBtn");
-logoutBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  signOut(auth)
-    .then(() => {
-      window.location.assign("./login.html");
-    })
-    .catch((err) => {
-      console.log("Error: " + err);
-    });
-});
+// var logoutBtn = document.getElementById("logoutBtn");
+// logoutBtn.addEventListener("click", e =>{
+//     e.preventDefault();
+//     signOut(auth).then(() => {
+//         window.location.assign("./login.html");
+//     }).catch((err) => {
+//         console.log("Error: " + err);
+//     })
+// })
 
 const userNameNav = document.getElementById("userNameNav");
 

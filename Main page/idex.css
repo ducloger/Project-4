@@ -10,3 +10,9 @@ button.btn_hover:hover{
 a:hover{
     color: red !important;
 }
+.span{
+    font-weight: 700;
+}
+.product{
+    background-color: yellow;
+}

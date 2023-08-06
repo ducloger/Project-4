@@ -17,19 +17,19 @@
 	//Chạy function
 	fullHeight();
   
-	var togglePasswords = document.querySelectorAll('.toggle-password');
+	// var togglePasswords = document.querySelectorAll('.toggle-password');
   
-	for (var i = 0; i < togglePasswords.length; i++) {
-	  togglePasswords[i].addEventListener('click', function() {
-		this.classList.toggle('fa-eye');
-		this.classList.toggle('fa-eye-slash');
-		var input = document.querySelector(this.getAttribute('toggle'));
-		if (input.getAttribute('type') === 'password') {
-		  input.setAttribute('type', 'text');
-		} else {
-		  input.setAttribute('type', 'password');
-		}
-	  });
-	}
+	// for (var i = 0; i < togglePasswords.length; i++) {
+	//   togglePasswords[i].addEventListener('click', function() {
+	// 	this.classList.toggle('fa-eye');
+	// 	this.classList.toggle('fa-eye-slash');
+	// 	var input = document.querySelector(this.getAttribute('toggle'));
+	// 	if (input.getAttribute('type') === 'password') {
+	// 	  input.setAttribute('type', 'text');
+	// 	} else {
+	// 	  input.setAttribute('type', 'password');
+	// 	}
+	//   });
+	// }
   })();
   
